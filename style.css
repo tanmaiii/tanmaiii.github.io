@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height:100vh;
+    background: #dff9fb;
+}
+
+.wrapper{
+    width: 65vmin;
+    height: 70vmin;
+    background-color:#686de0;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.game-details{
+    color: #c7ecee;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 27px;
+}
+
+.play-board{
+    width: 100%;
+    height: 100%;
+    background:#4834d4;
+    display: grid;
+    grid-template: repeat(30 , 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food {
+    background: #eb4d4b;
+    border-radius: 5px;
+}
+
+.play-board .head {
+    background: #6ab04c;
+    border-radius: 2px;
+}
+
+.controls{
+    display: none;
+    justify-content: center;
+}
+
+.controls i{
+    padding: 10px;
+    color: #c7ecee;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #4834d4;
+}
+
+.controls i:active{
+    background:#4834d4;
+}
+
+.controls-item{
+    width: calc(100% / 3);
+}
+
+.controls-UpDown{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 800px){
+    .wrapper{
+        width: 90vmin;
+        height:115vmin;
+    }
+
+    .game-details{
+        font-size:1rem;
+        padding: 15px 27px;
+    }
+
+    .controls{
+        display: flex;
+    }
+
+    .controls i{
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
